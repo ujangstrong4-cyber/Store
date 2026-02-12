@@ -123,7 +123,8 @@ function renderCartItems() {
         cartItemsContainer.innerHTML = '<p class="empty-msg">Your cart is empty.</p>';
     } else {
         cart.forEach((item, index) => {
-            const priceVal = parseFloat(item.price.replace('$', ''));
+            // Parse price: Remove "Rp", dots, and spaces
+            const priceVal = parseFloat(item.price.replace(/[^0-9]/g, ''));
             total += priceVal;
 
             const cartItem = document.createElement('div');
@@ -143,7 +144,8 @@ function renderCartItems() {
         });
     }
 
-    totalPriceEl.innerText = '$' + total.toFixed(2);
+    // Format total to IDR currency format
+    totalPriceEl.innerText = 'Rp ' + total.toLocaleString('id-ID');
 }
 
 function removeFromCart(index) {
