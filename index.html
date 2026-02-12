@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Deco Store - Best place for Phone Credit, E-Wallet Balance, and Gaming Top-ups.">
+    <title>Deco Store | Digital Products & Gaming</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-glow"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-gamepad"></i> Deco<span>Store</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+            <div class="cart-icon" id="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <div class="menu-icon" id="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Level Up Your <br><span class="highlight">Digital Life</span></h1>
+            <p>Instant Top-ups for Free Fire, Mobile Legends, PUBG, and specialized E-Wallet services.</p>
+            <a href="#products" class="btn btn-primary">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="hero-image">
+            <div class="floating-card card-1">
+                <i class="fa-solid fa-gem"></i>
+                <span>Diamonds</span>
+            </div>
+            <div class="floating-card card-2">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <span>Credit</span>
+            </div>
+            <div class="visual-circle"></div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="category-card">
+            <i class="fa-solid fa-gamepad"></i>
+            <h3>Games</h3>
+        </div>
+        <div class="category-card">
+            <i class="fa-solid fa-wallet"></i>
+            <h3>E-Wallet</h3>
+        </div>
+        <div class="category-card">
+            <i class="fa-solid fa-mobile-alt"></i>
+            <h3>Credit</h3>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="section-header">
+            <h2>Popular <span>Products</span></h2>
+            <p>Best sellers chosen by our community</p>
+        </div>
+
+        <div class="product-grid" id="product-container">
+            <!-- Products will be injected here by JS -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Deco<span>Store</span></h2>
+                <p>Your one-stop shop for all things digital.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-discord"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Deco Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <i class="fa-solid fa-xmark close-cart" id="close-cart"></i>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items injected here -->
+                <p class="empty-msg">Your cart is empty.</p>
+            </div>
+            <div class="cart-footer">
+                <div class="total-price">Total: <span id="total-price">$0.00</span></div>
+                <button class="btn btn-primary checkout-btn" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
