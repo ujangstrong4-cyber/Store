@@ -3,43 +3,43 @@ const products = [
         id: 1,
         name: "Free Fire 100 Diamonds",
         category: "Games",
-        price: "$1.00",
-        image: "fa-fire"
+        price: "Rp 15.000",
+        image: "https://iplay.lk/wp-content/uploads/2023/08/freefire.jpg"
     },
     {
         id: 2,
         name: "Mobile Legends 50 Diamonds",
         category: "Games",
-        price: "$1.20",
-        image: "fa-shield-halved"
+        price: "Rp 15.000",
+        image: "https://thumb.viva.id/vivanewsgames/375x211/2025/09/15/68c761679bd5e-sejarah-perkembangan-mobile-legends_subdomain-ai.jpg"
     },
     {
         id: 3,
         name: "PUBG Mobile 60 UC",
         category: "Games",
-        price: "$0.99",
-        image: "fa-crosshairs"
+        price: "Rp 15.000",
+        image: "https://yt3.googleusercontent.com/qwJu_kd0PAULpj_kHXc1bf_W0SKvjNPbkFtZe-XCOfP2ztISgCmZa7BlUkNofNnxXK1VOsre=s900-c-k-c0x00ffffff-no-rj"
     },
     {
         id: 4,
-        name: "Google Play $10 Gift Card",
+        name: "Google Play 150rb Gift Card",
         category: "E-Wallet",
-        price: "$10.00",
-        image: "fa-google-play"
+        price: "Rp 150.000",
+        image: "https://productimages.nimbledeals.com/nimblebuy/google-play-gift-code-26-69853-regular.jpg"
     },
     {
         id: 5,
-        name: "Steam Wallet $20",
+        name: "Steam Wallet 200rb",
         category: "E-Wallet",
-        price: "$20.00",
-        image: "fa-steam"
+        price: "Rp 200.000",
+        image: "https://row.haluan.co/wp-content/uploads/2023/11/STEAM-2.jpeg"
     },
     {
         id: 6,
-        name: "Phone Credit $5",
+        name: "Axis 50rb",
         category: "Credit",
-        price: "$5.00",
-        image: "fa-mobile-screen"
+        price: "Rp 50.000",
+        image: "https://lh4.googleusercontent.com/proxy/J326uZR5DEtv895o2bUwVfelFyb6ZhmY-6EWpcpBcQx29WlY6z27KekPgTt_SOyaFcOSRUMQtYHfQg6Vde6qEp9NzW1gF9ahWAh55Qn851zMDZLDIwdCUdGDIu8-Imwb1WWPdo7z96ieA2NDi0mxkf1zESgthyLvhVuS"
     }
 ];
 
@@ -55,7 +55,9 @@ function renderProducts() {
         productCard.innerHTML = `
             <div class="badge">Hot</div>
             <div class="product-image">
-                <i class="fa-brands ${product.image}"></i>
+                ${product.image.startsWith('http')
+                ? `<img src="${product.image}" alt="${product.name}">`
+                : `<i class="${product.image}"></i>`}
             </div>
             <div class="product-info">
                 <div class="product-category">${product.category}</div>
