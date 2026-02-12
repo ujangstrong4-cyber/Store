@@ -132,10 +132,10 @@ function renderCartItems() {
 
             cartItem.innerHTML = `
                 <div class="cart-item-info">
-                    <h4>Rp{item.name}</h4>
-                    <span>Rp{item.price}</span>
+                    <h4> ${item.name}</h4>
+                    <span> ${item.price}</span>
                 </div>
-                <div class="cart-item-remove" onclick="removeFromCart(Rp{index})">
+                <div class="cart-item-remove" onclick="removeFromCart(${index})">
                     <i class="fa-solid fa-trash"></i>
                 </div>
             `;
